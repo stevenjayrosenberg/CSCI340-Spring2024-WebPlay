@@ -24,6 +24,7 @@
             return email;
         }
 
+        abstract public String getStudentID();
     }
 </script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
