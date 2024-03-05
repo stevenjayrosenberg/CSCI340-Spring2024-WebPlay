@@ -2,50 +2,28 @@
 
 
 <script runat="server">
-    namespace SES
-    {
+    abstract class User{
+        private String employeeID;
+        private String name;
+        private String email;
 
-        public abstract class User {
-            private String employeeID;
-            private String name;
-            private String email;
-
-            public User(String theEmployeeID, String theName, String theEmail) {
-                employeeID = theEmployeeID;
-                name = theName;
-                email = theEmail;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public String getEmployeeID() {
-                return employeeID;
-            }
-            public String getEmail() {
-                return email;
-            }
-
-            public abstract String getStudentID();
+        public User(String theEmployeeID, String theName, String theEmail) {
+            employeeID = theEmployeeID;
+            name = theName;
+            email = theEmail;
         }
 
-        public class SE : User
-        {
-            private String StudentID;
-
-            public SE(String theName, String theEmployeeID, String theEmail, String theStudentID) : base(theEmployeeID, theName, theEmail)
-            {
-                StudentID = theStudentID;
-            }
-
-            override
-            public String getStudentID()
-            {
-                return StudentID;
-            }
-
+        public String getName() {
+            return name;
         }
+
+        public String getEmployeeID() {
+            return employeeID;
+        }
+        public String getEmail() {
+            return email;
+        }
+
     }
 </script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
