@@ -29,9 +29,10 @@
 
     public class SE {
         private String studentID;
-
-        public SE(String theStudentID) {
+        private bool isInternational;
+        public SE(String theStudentID, bool isInt) {
             studentID = theStudentID;
+            isInternational = isInt;
         }
     }
 </script>
