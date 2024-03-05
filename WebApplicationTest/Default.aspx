@@ -2,37 +2,49 @@
 
 
 <script runat="server">
-    abstract class User{
-        private String employeeID;
-        private String name;
-        private String email;
+    namespace SES
+    {
 
-        public User(String theEmployeeID, String theName, String theEmail) {
-            employeeID = theEmployeeID;
-            name = theName;
-            email = theEmail;
+        public abstract class User {
+            private String employeeID;
+            private String name;
+            private String email;
+
+            public User(String theEmployeeID, String theName, String theEmail) {
+                employeeID = theEmployeeID;
+                name = theName;
+                email = theEmail;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public String getEmployeeID() {
+                return employeeID;
+            }
+            public String getEmail() {
+                return email;
+            }
+
+            public abstract String getStudentID();
         }
 
-        public String getName() {
-            return name;
-        }
+        public class SE : User
+        {
+            private String StudentID;
 
-        public String getEmployeeID() {
-            return employeeID;
-        }
-        public String getEmail() {
-            return email;
-        }
+            public SE(String theName, String theEmployeeID, String theEmail, String theStudentID) : base(theEmployeeID, theName, theEmail)
+            {
+                StudentID = theStudentID;
+            }
 
-        abstract public String getStudentID();
-    }
+            override
+            public String getStudentID()
+            {
+                return StudentID;
+            }
 
-    public class SE {
-        private String studentID;
-        private bool isInternational;
-        public SE(String theStudentID, bool isInt) {
-            studentID = theStudentID;
-            isInternational = isInt;
         }
     }
 </script>
