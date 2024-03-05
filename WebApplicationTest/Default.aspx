@@ -26,6 +26,14 @@
 
         abstract public String getStudentID();
     }
+
+    public class SE {
+        private String studentID;
+
+        public SE(String theStudentID) {
+            studentID = theStudentID;
+        }
+    }
 </script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
