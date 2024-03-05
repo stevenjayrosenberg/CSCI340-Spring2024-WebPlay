@@ -34,6 +34,12 @@
             studentID = theStudentID;
         }
     }
+    public class Supervisor {
+
+            public Supervisor(String theName, String theEmail, String theEmployeeId);
+        }
+
+
 </script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
