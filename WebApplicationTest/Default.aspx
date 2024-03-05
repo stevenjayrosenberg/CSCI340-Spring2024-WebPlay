@@ -24,7 +24,22 @@
             return email;
         }
 
+        abstract public String getStudentID();
     }
+
+    public class SE {
+        private String studentID;
+
+        public SE(String theStudentID) {
+            studentID = theStudentID;
+        }
+    }
+    public class Supervisor {
+
+            public Supervisor(String theName, String theEmail, String theEmployeeId);
+        }
+
+
 </script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
