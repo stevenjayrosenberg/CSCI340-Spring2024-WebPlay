@@ -1,46 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplicationTest._Default" %>
 
 
-<script runat="server">
-    abstract class User{
-        private String employeeID;
-        private String name;
-        private String email;
-
-        public User(String theEmployeeID, String theName, String theEmail) {
-            employeeID = theEmployeeID;
-            name = theName;
-            email = theEmail;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getEmployeeID() {
-            return employeeID;
-        }
-        public String getEmail() {
-            return email;
-        }
-
-        abstract public String getStudentID();
-    }
-
-    public class SE {
-        private String studentID;
-
-        public SE(String theStudentID) {
-            studentID = theStudentID;
-        }
-    }
-    public class Supervisor {
-
-            public Supervisor(String theName, String theEmail, String theEmployeeId);
-        }
-
-
-</script>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>

@@ -195,6 +195,14 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\Administrator.cs" />
+    <Compile Include="Classes\Job.cs" />
+    <Compile Include="Classes\Schedule.cs" />
+    <Compile Include="Classes\SE.cs" />
+    <Compile Include="Classes\Supervisor.cs" />
+    <Compile Include="Classes\Team.cs" />
+    <Compile Include="Classes\TimeBlock.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
