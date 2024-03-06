@@ -1,17 +1,22 @@
 ﻿
+using System.Collections.Generic;
+
 namespace WebApplicationTest
 {
     public class Job
     {
         private string Name;
         private int Desiredhours;
-        private string Department;
+        private string Department; 
+        private List<Supervisor> SupervisorList;
 
-        public  Job(string JobName, int theDesiredHours, string DepartmentName)
+        public  Job(string JobName, int theDesiredHours, string DepartmentName, List<Supervisor>theSupervisorList)
         {
             Name = JobName;
             Desiredhours = theDesiredHours;
             Department = DepartmentName;
+            SupervisorList = theSupervisorList;
+          
         }
         public string getJobName()
         {
@@ -25,5 +30,10 @@ namespace WebApplicationTest
         {
             return Department;
         }
+        public List<Supervisor> getSupervisorList() 
+        {
+            return SupervisorList;
+        }
+
     }
 }
