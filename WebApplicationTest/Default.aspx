@@ -2,6 +2,31 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <script runat="server">
+    abstract class Admin{
+        private String employeeID;
+        private String name;
+        private String email;
+
+        public Admin(String theEmployeeID, String theName, String theEmail) {
+            employeeID = theEmployeeID;
+            name = theName;
+            email = theEmail;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getEmployeeID() {
+            return employeeID;
+        }
+        public String getEmail() {
+            return email;
+        }
+
+    }
+</script>
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
