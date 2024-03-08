@@ -7,6 +7,10 @@ namespace WebApplicationTest
         public Administrator(String AdminName, String AdminEmail, String AdminEmployeeId) :
             base(AdminName, AdminEmail, AdminEmployeeId)
         { }
-        override
+
+        public override string getStudentID()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
