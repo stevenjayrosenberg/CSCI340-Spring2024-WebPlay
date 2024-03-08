@@ -43,6 +43,14 @@
                 <p>
                     Added new paragraph: Change done by Elroee!
                 </p>
+                <%  var message = "This message will be displayed 5 times in this page";
+                    for (int i = 0; i < 5; i++) 
+                    {
+                %>
+                        <p><%= message %></p>
+                <%
+                    }
+                %>
             </section>
         </div>
     </main>
