@@ -1,4 +1,4 @@
-drop table if exists Team, Job, Department, Supervises, [Admin], Supervisor, SE, [User], Works_for
+drop table if exists Works_for, Team, Job, Department, Supervises, [Admin], Supervisor, SE, [User] 
 --create database SESSystemTest
 
 --Department table
