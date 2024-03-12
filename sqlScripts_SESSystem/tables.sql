@@ -18,7 +18,7 @@ references Department(department_name))
 --User table
 CREATE TABLE [User]
 (
-employee_id CHAR(8),
+employee_id CHAR(8) not null,
 first_name VARCHAR(25),
 last_name VARCHAR(30),
 username VARCHAR(10),
@@ -29,7 +29,7 @@ CONSTRAINT PK_User PRIMARY KEY ([employee_id])
 --Admin table
 CREATE TABLE [Admin]
 (
-user_employee_id CHAR(8),
+user_employee_id CHAR(8) not null,
 CONSTRAINT PK_Admin PRIMARY KEY(user_employee_id),
 CONSTRAINT FK_Admin_User FOREIGN KEY (user_employee_id)
        REFERENCES [USER](employee_id)
@@ -38,7 +38,7 @@ CONSTRAINT FK_Admin_User FOREIGN KEY (user_employee_id)
 --Supervisor table
 CREATE TABLE Supervisor
 (
-user_employee_id CHAR(8), 
+user_employee_id CHAR(8) not null, 
 CONSTRAINT PK_Supervisor PRIMARY KEY(user_employee_id),
 CONSTRAINT FK_Supervisor_User FOREIGN KEY (user_employee_id)
        REFERENCES [USER](employee_id)
@@ -47,7 +47,7 @@ CONSTRAINT FK_Supervisor_User FOREIGN KEY (user_employee_id)
 --SE table
 CREATE TABLE SE
 (
-user_employee_id CHAR(8),
+user_employee_id CHAR(8) not null,
 student_id CHAR(7),
 is_internatinal BIT,  
 CONSTRAINT PK_SE PRIMARY KEY(user_employee_id),
@@ -58,8 +58,8 @@ CONSTRAINT FK_SE_User FOREIGN KEY (user_employee_id)
 --Supervises table
 CREATE TABLE Supervises
 (
-supervisor_employee_id CHAR(8),
-se_employee_id CHAR(8),
+supervisor_employee_id CHAR(8) not null,
+se_employee_id CHAR(8) not null,
 CONSTRAINT PK_Supervises PRIMARY KEY(supervisor_employee_id, SE_employee_id),
 CONSTRAINT FK_Supervises_Supervisor FOREIGN KEY (supervisor_employee_id)
         REFERENCES Supervisor(user_employee_id),
